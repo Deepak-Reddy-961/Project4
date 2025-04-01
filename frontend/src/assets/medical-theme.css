@@ -1,0 +1,380 @@
+/* MedicalCenter Theme CSS */
+
+:root {
+  /* Primary color palette */
+  --primary-color: #0065e1;
+  --primary-light: #3f8ff3;
+  --primary-dark: #004db0;
+  --secondary-color: #223a66;
+  --accent-color: #e12454;
+  
+  /* Neutral colors */
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --gray: #e9ecef;
+  --dark-gray: #6c757d;
+  --black: #222222;
+  
+  /* Font family */
+  --font-primary: 'Roboto', sans-serif;
+  --font-heading: 'Exo', sans-serif;
+  
+  /* Font sizes */
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+}
+
+/* Global styles */
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--secondary-color);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #c61e4a;
+  color: var(--white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Header styles */
+.header {
+  background-color: var(--white);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.nav-link {
+  color: var(--secondary-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: var(--transition-base);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color);
+}
+
+/* Hero section */
+.hero-section {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 5rem 0;
+  background-image: url('https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-coat_23-2149611279.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 58, 102, 0.8);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: var(--text-5xl);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: var(--text-xl);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: var(--text-xl);
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: var(--dark-gray);
+  margin-bottom: 1.25rem;
+}
+
+/* Section styles */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: var(--text-3xl);
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+/* Department section */
+.department-item {
+  background-color: var(--light-gray);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  transition: var(--transition-base);
+}
+
+.department-item:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.department-item:hover h3 {
+  color: var(--white);
+}
+
+/* Doctor card */
+.doctor-card {
+  text-align: center;
+}
+
+.doctor-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 5px solid var(--light-gray);
+}
+
+.doctor-name {
+  font-size: var(--text-xl);
+  margin-bottom: 0.5rem;
+}
+
+.doctor-specialty {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 4rem 0 2rem;
+}
+
+.footer h4 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  font-size: var(--text-xl);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition-base);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.footer-link:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* Form elements */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+}
+
+.form-control:focus {
+  border-color: var(--primary-light);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 101, 225, 0.25);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: var(--text-4xl);
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Dark mode */
+.dark-mode {
+  --white: #121212;
+  --light-gray: #1e1e1e;
+  --gray: #2c2c2c;
+  --dark-gray: #b0b0b0;
+  --black: #e0e0e0;
+}
+
+.dark-mode .card,
+.dark-mode .header {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .card-text {
+  color: #b0b0b0;
+}
+
+.dark-mode .department-item {
+  background-color: #1e1e1e;
+} 
