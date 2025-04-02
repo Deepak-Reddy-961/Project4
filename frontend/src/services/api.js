@@ -12,7 +12,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Base URLs for different environments
 const API_URLS = {
-  development: 'http://localhost:5000/api',
+  development: "https://healthapp-backend-42n8.onrender.com",
   production: 'https://api.healthcareapp.com/api',
   test: 'http://localhost:5000/api',
 };
