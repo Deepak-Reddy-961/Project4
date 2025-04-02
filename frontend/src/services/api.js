@@ -14,7 +14,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const API_URLS = {
   development: "https://healthapp-backend-42n8.onrender.com",
   production: 'https://api.healthcareapp.com/api',
-  test: 'http://localhost:5000/api',
+  test: "https://healthapp-backend-42n8.onrender.com",
 };
 
 // Get the current environment
